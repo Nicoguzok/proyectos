@@ -35,3 +35,10 @@ equal.addEventListener('click', () => {
     }
 });
 
+clear.addEventListener('click', () => {
+    input.value = '';
+});
+
+erase.addEventListener('click', () => {
+    input.value = input.value.slice(0, -1);
+});
