@@ -299,7 +299,6 @@ document.querySelectorAll('.box').forEach(item => {
                         break;
                     }
                 }
-
                 for (let i = 1; i < 9; i++) {
                     if (i < aup / 100 && i < 9 - aside && document.getElementById(`b${a - i * 100 + i}`).innerText.length == 0) {
                         document.getElementById(`b${a - i * 100 + i}`).style.backgroundColor = 'greenyellow'
@@ -309,8 +308,6 @@ document.querySelectorAll('.box').forEach(item => {
                         break
                     }
                 }
-
-
                 for (let i = 1; i < 9; i++) {
                     if (i < (900 - aup) / 100 && i < aside && document.getElementById(`b${a + i * 100 - i}`).innerText.length == 0) {
                         document.getElementById(`b${a + i * 100 - i}`).style.backgroundColor = 'greenyellow'
@@ -321,8 +318,6 @@ document.querySelectorAll('.box').forEach(item => {
                     }
 
                 }
-
-
                 for (let i = 1; i < 9; i++) {
                     if (i < aup / 100 && i < aside && document.getElementById(`b${a - i * 100 - i}`).innerText.length == 0) {
                         document.getElementById(`b${a - i * 100 - i}`).style.backgroundColor = 'greenyellow'
@@ -332,15 +327,9 @@ document.querySelectorAll('.box').forEach(item => {
                         break
                     }
                 }
-
-
-
                 item.style.backgroundColor = 'blue'
 
             }
-
-            // ROOK
-
             if (item.innerText == `${toggle}rook`) {
 
                 for (let i = 1; i < 9; i++) {
@@ -386,14 +375,10 @@ document.querySelectorAll('.box').forEach(item => {
                         break
                     }
                 }
-
                 item.style.backgroundColor = 'blue'
             }
 
         }
-
-        // Toggling the turn
-
         if (tog % 2 !== 0) {
             document.getElementById('tog').innerText = "White's Turn"
             whosTurn('W')
@@ -404,22 +389,15 @@ document.querySelectorAll('.box').forEach(item => {
         }
 
         reddish()
-
-
-
     })
 })
 
 // Moving the element
 document.querySelectorAll('.box').forEach(hathiTest => {
-
     hathiTest.addEventListener('click', function () {
-
         if (hathiTest.style.backgroundColor == 'blue') {
-
             blueId = hathiTest.id
             blueText = hathiTest.innerText
-
             document.querySelectorAll('.box').forEach(hathiTest2 => {
 
                 hathiTest2.addEventListener('click', function () {
@@ -440,11 +418,8 @@ document.querySelectorAll('.box').forEach(hathiTest => {
 
 })
 
-
-
-
-// Prvents from selecting multiple elements
 z = 0
+
 document.querySelectorAll('.box').forEach(ee => {
   ee.addEventListener('click', function () {
       z = z + 1
